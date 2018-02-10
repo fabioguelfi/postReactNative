@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { Platform } from 'react-native';
+import { StackNavigator } from 'react-navigation'
 
 import Profile from './scenes/profile'
 import Posts from './scenes/posts'
@@ -16,22 +12,9 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Welcome to React Native!</Text>
+const App = StackNavigator({
+  Posts: { screen: Posts },
+  Profile: { screen: Profile }
+})
 
-        <Posts />
-        
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 30,
-  },
-});
+export default App

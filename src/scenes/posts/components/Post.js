@@ -10,7 +10,7 @@ class Post extends Component {
                 <Text style={styles.postTitle}>Post</Text>
                 <Text style={styles.postDescripition}>lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit,lorem ipsum dolor sit amet consectetur adipiscing elit</Text>
             </View>
-        );
+        )
     }
 }
 
